@@ -422,7 +422,7 @@ function generateCode() {
   if(!list.length){ alert('Please pick at least one flower! 🌷'); return; }
   const data = { from, to, msg, flowers:list.map(f=>f.id), wrap:wrapCol, ribbon:ribbonCol };
   const encoded = btoa(encodeURIComponent(JSON.stringify(data)));
-  const base = 'https://sukhman-dot.github.io/Bloomgram/';
+  const base = 'https://sukhman-dot.github.io/bloomgram/';
   document.getElementById('share-url').value = base + '#' + encoded;
   showPage('share');
   launchConfetti();
