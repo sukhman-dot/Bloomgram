@@ -16,7 +16,7 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);min
 .page.active{display:block;}
 #home.active{display:flex;flex-direction:column;}
 #share.active,#open.active,#view.active{display:flex;}
-
+ 
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:100px;font-family:'Jost',sans-serif;font-size:.95rem;font-weight:500;cursor:pointer;transition:all .22s;border:none;}
 .btn.primary{background:var(--rose);color:#fff;box-shadow:0 8px 28px rgba(212,104,122,.32);}
 .btn.primary:hover{background:var(--deep);transform:translateY(-2px);}
@@ -24,7 +24,7 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);min
 .btn.ghost:hover{background:var(--blush);}
 .btn.sm{padding:.6rem 1.3rem;font-size:.85rem;}
 .btn.full{width:100%;justify-content:center;}
-
+ 
 /* HOME */
 .home-hero{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;}
 .home-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem 5rem 6rem;}
@@ -37,7 +37,7 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);min
 .home-flower-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;padding:3rem;}
 .home-flower-cell{display:flex;align-items:center;justify-content:center;transition:transform .35s;}
 .home-flower-cell:hover{transform:scale(1.1) rotate(5deg);}
-
+ 
 /* CREATE */
 #create{background:var(--cream);}
 .create-layout{display:grid;grid-template-columns:1fr 380px;min-height:100vh;}
@@ -66,7 +66,7 @@ textarea.field-input{resize:none;line-height:1.6;}
 .preview-label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem;}
 .preview-to{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--deep);text-align:center;margin-top:1rem;}
 .preview-msg{font-size:.8rem;color:var(--muted);text-align:center;max-width:200px;line-height:1.5;margin-top:.4rem;}
-
+ 
 /* SHARE / OPEN */
 #share,#open{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;background:linear-gradient(135deg,#fff5f7,var(--cream),#f5f0eb);}
 .page-bloom{font-size:3.2rem;margin-bottom:1rem;animation:floatY 3s ease-in-out infinite;}
@@ -82,7 +82,7 @@ textarea.field-input{resize:none;line-height:1.6;}
 .share-actions{display:flex;gap:.6rem;justify-content:center;margin-top:1.4rem;flex-wrap:wrap;}
 .open-textarea{width:100%;background:transparent;border:none;outline:none;font-family:monospace;font-size:.7rem;color:var(--deep);resize:none;line-height:1.6;}
 .open-error{display:none;color:#d04040;font-size:.8rem;margin-top:.6rem;}
-
+ 
 /* VIEW */
 #view{flex-direction:column;align-items:center;justify-content:center;padding:3rem 2rem;background:linear-gradient(160deg,#fff0f4,var(--cream),#f5f0eb);}
 .view-tag{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:.8rem;}
@@ -93,12 +93,12 @@ textarea.field-input{resize:none;line-height:1.6;}
 .msg-card{background:#fff;border-radius:20px;padding:1.6rem 1.8rem;max-width:400px;width:100%;box-shadow:0 6px 28px rgba(212,104,122,.1);position:relative;margin:1.4rem 0 1.8rem;text-align:center;}
 .msg-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--blush);position:absolute;top:-6px;left:14px;line-height:1;}
 .msg-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;}
-
+ 
 /* Confetti */
 .conf-wrap{position:fixed;inset:0;pointer-events:none;z-index:999;}
 .conf-piece{position:absolute;top:-16px;border-radius:3px;animation:confDrop linear forwards;}
 @keyframes confDrop{to{transform:translateY(110vh) rotate(540deg);opacity:0;}}
-
+ 
 @media(max-width:800px){
   .home-hero{grid-template-columns:1fr;}
   .home-right{display:none;}
@@ -111,7 +111,7 @@ textarea.field-input{resize:none;line-height:1.6;}
 </head>
 <body>
 <div class="conf-wrap" id="confetti"></div>
-
+ 
 <!-- HOME -->
 <div class="page" id="home">
   <div class="home-hero">
@@ -129,7 +129,7 @@ textarea.field-input{resize:none;line-height:1.6;}
     </div>
   </div>
 </div>
-
+ 
 <!-- CREATE -->
 <div class="page" id="create">
   <div class="create-layout">
@@ -171,7 +171,7 @@ textarea.field-input{resize:none;line-height:1.6;}
     </div>
   </div>
 </div>
-
+ 
 <!-- SHARE -->
 <div class="page" id="share">
   <div class="page-bloom">🌸</div>
@@ -190,7 +190,7 @@ textarea.field-input{resize:none;line-height:1.6;}
     </div>
   </div>
 </div>
-
+ 
 <!-- VIEW -->
 <div class="page" id="view">
   <div class="view-tag">A bouquet has arrived for you 🌸</div>
@@ -200,7 +200,7 @@ textarea.field-input{resize:none;line-height:1.6;}
   <div class="msg-card"><p class="msg-text" id="view-msg">…</p></div>
   <button class="btn primary" onclick="showPage('create')">Send one back 🌹</button>
 </div>
-
+ 
 <script>
 // ══════════════════════════════════════════
 // SVG FLOWER LIBRARY
@@ -301,12 +301,12 @@ const FLOWERS = [
       </svg>`}
   },
 ];
-
+ 
 const WRAP_COLS   = ['#f9c2d0','#fde68a','#c4b5fd','#bfdbfe','#bbf7d0','#fecaca','#f5f5dc','#fed7aa'];
 const RIBBON_COLS = ['#d4687a','#9333ea','#22c55e','#3b82f6','#f97316','#ec4899','#6366f1','#eab308'];
-
+ 
 let sel={}, wrapCol=WRAP_COLS[0], ribbonCol=RIBBON_COLS[0];
-
+ 
 // ══════════════════════════════════════════
 // BUILD GRID & HOME DISPLAY
 // ══════════════════════════════════════════
@@ -319,7 +319,7 @@ function buildHomeFlowers() {
     g.appendChild(d);
   });
 }
-
+ 
 function buildFlowerGrid() {
   const g = document.getElementById('flower-grid');
   FLOWERS.forEach(f => {
@@ -331,7 +331,7 @@ function buildFlowerGrid() {
     g.appendChild(card);
   });
 }
-
+ 
 function buildSwatches(cid, cols, cb, init) {
   const c = document.getElementById(cid);
   cols.forEach((col, i) => {
@@ -347,7 +347,7 @@ function buildSwatches(cid, cols, cb, init) {
     c.appendChild(s);
   });
 }
-
+ 
 // ══════════════════════════════════════════
 // FLOWER SELECTION
 // ══════════════════════════════════════════
@@ -358,7 +358,7 @@ function toggleFlower(id, card) {
   else { card.classList.add('selected'); chip.style.display='flex'; chip.textContent=sel[id]; }
   updatePreview();
 }
-
+ 
 function getFlowerList() {
   const list=[];
   Object.entries(sel).forEach(([id,cnt])=>{
@@ -366,7 +366,7 @@ function getFlowerList() {
   });
   return list;
 }
-
+ 
 // ══════════════════════════════════════════
 // BOUQUET RENDERER
 // ══════════════════════════════════════════
@@ -375,7 +375,7 @@ function renderBouquet(list, wrap, ribbon, el, size) {
   const W=lg?280:200, H=lg?300:220;
   const headSz=lg?72:52, paperW=lg?180:132, paperH=lg?140:100;
   const bowBW=lg?30:22, bowBH=lg?20:15, bowK=lg?18:13, bowTop=lg?20:15;
-
+ 
   let stemsHTML='';
   const n=list.length;
   const stemW=lg?4:3;
@@ -387,9 +387,9 @@ function renderBouquet(list, wrap, ribbon, el, size) {
       <div style="width:${stemW}px;height:${stemH}px;border-radius:2px;background:#5a8a5a;flex-shrink:0;margin:0 auto;"></div>
     </div>`;
   });
-
+ 
   if(!n) stemsHTML=`<div style="color:#c0a8b0;font-size:.8rem;text-align:center;padding-top:3rem;width:100%">Pick some flowers!</div>`;
-
+ 
   el.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;">
     <div style="position:relative;width:${W}px;height:${H}px;margin-bottom:-${lg?28:20}px;">${stemsHTML}</div>
     <div style="width:${paperW}px;height:${paperH}px;clip-path:polygon(10% 0%,90% 0%,100% 100%,0% 100%);border-radius:0 0 8px 8px;background:${wrap};position:relative;overflow:hidden;flex-shrink:0;">
@@ -402,7 +402,7 @@ function renderBouquet(list, wrap, ribbon, el, size) {
     </div>
   </div>`;
 }
-
+ 
 function updatePreview() {
   renderBouquet(getFlowerList(), wrapCol, ribbonCol, document.getElementById('preview-bouquet'), 'sm');
   const to  = document.getElementById('to-name').value.trim()||'someone special';
@@ -410,7 +410,7 @@ function updatePreview() {
   document.getElementById('preview-to').innerHTML=`For <em>${to}</em>`;
   document.getElementById('preview-msg').textContent=msg.length>70?msg.slice(0,70)+'…':msg;
 }
-
+ 
 // ══════════════════════════════════════════
 // GENERATE & SHARE
 // ══════════════════════════════════════════
@@ -427,7 +427,7 @@ function generateCode() {
   showPage('share');
   launchConfetti();
 }
-
+ 
 function copyCode() {
   const btn = document.getElementById('copy-btn');
   const input = document.getElementById('share-url');
@@ -452,14 +452,14 @@ function copyCode() {
     document.execCommand('copy'); done();
   }
 }
-
+ 
 function previewOwn() {
   const val = document.getElementById('share-url').value.trim();
   // extract just the encoded part — works with full URL or raw code
   const encoded = val.includes('#') ? val.split('#')[1] : val;
   decodeAndShow(encoded);
 }
-
+ 
 function resetAll() {
   sel={}; wrapCol=WRAP_COLS[0]; ribbonCol=RIBBON_COLS[0];
   ['from-name','to-name','message'].forEach(id=>document.getElementById(id).value='');
@@ -469,7 +469,7 @@ function resetAll() {
   document.querySelectorAll('#ribbon-swatches .swatch').forEach((s,i)=>s.classList.toggle('sel',i===0));
   updatePreview(); showPage('create');
 }
-
+ 
 // ══════════════════════════════════════════
 // OPEN BOUQUET
 // ══════════════════════════════════════════
@@ -480,7 +480,7 @@ function openCode() {
   document.getElementById('open-error').style.display='none';
   if(!decodeAndShow(encoded)) document.getElementById('open-error').style.display='block';
 }
-
+ 
 function decodeAndShow(encoded) {
   try {
     // strip full URL down to just the hash if needed
@@ -498,7 +498,7 @@ function decodeAndShow(encoded) {
     return true;
   } catch(e){ return false; }
 }
-
+ 
 // ══════════════════════════════════════════
 // CONFETTI
 // ══════════════════════════════════════════
@@ -514,7 +514,7 @@ function launchConfetti() {
     setTimeout(()=>c.remove(),4500);
   }
 }
-
+ 
 // ══════════════════════════════════════════
 // NAV & INIT
 // ══════════════════════════════════════════
@@ -522,13 +522,13 @@ function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
-
+ 
 buildHomeFlowers();
 buildFlowerGrid();
 buildSwatches('wrap-swatches',   WRAP_COLS,   c=>{wrapCol=c;},   0);
 buildSwatches('ribbon-swatches', RIBBON_COLS, c=>{ribbonCol=c;}, 0);
 updatePreview();
-
+ 
 // Auto-open bouquet if URL has a hash
 try {
   const hash = window.location.hash.slice(1);
@@ -543,3 +543,4 @@ try {
 </script>
 </body>
 </html>
+ 
